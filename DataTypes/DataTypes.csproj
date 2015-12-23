@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DaysOfWeek.cs" />
+    <Compile Include="FrenchWindow.cs" />
+    <Compile Include="GeometricShapeCalculator.cs" />
     <Compile Include="Interfaces\ICalculateArea.cs" />
     <Compile Include="Interfaces\IWindow.cs" />
     <Compile Include="Program.cs" />

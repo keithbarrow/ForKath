@@ -13,14 +13,24 @@ namespace DataTypes
 		{
 			//EnumTester.Test(
 			var rectangularWindow = new RectangularWindow(2M, 5M);
-			
+
 			AreaTester(rectangularWindow);
 			WindowOpenTester(rectangularWindow);
+			Console.WriteLine("Opened and closed {0}", Window.OpenCloseCounter);
 			var circularWindow = new CircularWindow(1);
 			AreaTester(circularWindow);
 			WindowOpenTester(circularWindow);
+			Console.WriteLine("Opened and closed {0}", Window.OpenCloseCounter);
+
+			var frenchWindow = new FrenchWindow();
+			AreaTester(frenchWindow);
+			WindowOpenTester(frenchWindow);
+			frenchWindow.Unlock();
+			WindowOpenTester(frenchWindow);
+			Console.WriteLine("Opened and closed {0}", Window.OpenCloseCounter);
 			Console.ReadKey();
 		}
+
 
 		static void AreaTester(ICalculateArea window)
 		{

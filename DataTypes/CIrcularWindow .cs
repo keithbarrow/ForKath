@@ -17,7 +17,7 @@ namespace DataTypes
 
 		public override decimal CalculateArea()
 		{
-			return (decimal)Math.PI * Radius * Radius;
+			return GeometricShapeAreaCalculator.Circle(Radius);
 		}
 
 		// IN real life, don't really want a default ctor

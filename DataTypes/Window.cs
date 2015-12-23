@@ -9,17 +9,25 @@ namespace DataTypes
 {
 	public abstract class Window : IWindow, ICalculateArea
 	{
+
+		//This is a totally bulshit example to show a static member in a class!!!
+		//Insane design ahead
+		//This will be used to count all open/closes across all instances
+		//********************************************************************
+		public static int OpenCloseCounter { get; private set; }
+		//********************************************************************
 		public bool IsOpen { get; private set; }
 
-		private void ToggleWindowOpeness(bool newState)
+		protected void ToggleWindowOpeness(bool newState)
 		{
 			if (IsOpen != newState)
 			{
 				IsOpen = newState;
+				OpenCloseCounter++;
 			}
 		}
 
-		public void Open()
+		public virtual void Open()
 		{
 			ToggleWindowOpeness(true);
 		}

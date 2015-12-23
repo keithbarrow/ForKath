@@ -35,7 +35,7 @@ namespace DataTypes
 
 		public override decimal CalculateArea()
 		{
-			return Width * Height;
+			return GeometricShapeAreaCalculator.Rectangle(Width, Height);
 		}
 
 		// IN real life, don't really want a default ctor
