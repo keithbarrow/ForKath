@@ -22,8 +22,9 @@ namespace DataTypes
 			WindowOpenTester(circularWindow);
 			Console.WriteLine("Opened and closed {0}", Window.OpenCloseCounter);
 
-			var frenchWindow = new FrenchWindow();
+			var frenchWindow = Window.CreateWindow<FrenchWindow>(); //Not the best way to do this is an example
 			AreaTester(frenchWindow);
+			
 			WindowOpenTester(frenchWindow);
 			frenchWindow.Unlock();
 			WindowOpenTester(frenchWindow);

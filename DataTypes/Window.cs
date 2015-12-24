@@ -40,6 +40,23 @@ namespace DataTypes
 
 		public abstract decimal CalculateArea();
 
+
+		//Not the best way to do this is an example
+		public static T CreateWindow<T>()
+			where T : Window, new()
+		{
+			return new T();
+		}
+
+		//TrulyCrap - wrong & bad, just to show Multiple Generic declaration
+		public static void CreateWindow<T,S>(out T window, out S window2)
+			where T : Window, new()
+			where S: Window, new()
+		{
+			window1 = new T();
+			window2 = new S();
+		}
+
 		public Window()
 		{
 			IsOpen = false;
